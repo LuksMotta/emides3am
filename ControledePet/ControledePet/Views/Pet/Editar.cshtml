@@ -1,0 +1,32 @@
+﻿@model PetModel
+@{
+    ViewData["Title"] = "Editar Pets";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Adicionar Pet</h1>
+</div>
+
+<form asp-controller="Pet" asp-action="Alterar" method="post">
+    
+    <input type="hidden" asp-for="Id"/>
+    
+    <div class="form-group">
+        <label for="exampleInputEmail1">Nome</label>
+        <input asp-for="Nome" type="text" class="form-control" placeholder="Insira o Nome">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Raça</label>
+        <input asp-for="Raca" type="text" class="form-control" placeholder="Insira a Raça">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Gênero</label>
+        <input asp-for="Genero" type=" text" class="form-control" placeholder="Insira o Gênero">
+    </div>
+    <br />
+
+    <div>
+        <button type="submit" class="btn btn-primary">Atualizar</button>
+        <a role="button" class="btn btn-primary" asp-controller="Pet" asp-action="Index">Voltar</a>
+    </div>
+</form>
